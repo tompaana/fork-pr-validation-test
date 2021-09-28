@@ -2,10 +2,10 @@ name: Deploy
 
 on:
   pull_request:
-    branches: [develop, main]
+    branches: [develop, master]
   pull_request_target:
     types: [labeled]
-    branches: [develop, main]
+    branches: [develop, master]
   workflow_dispatch:
 
 concurrency:
