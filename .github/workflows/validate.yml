@@ -3,6 +3,8 @@ name: Validation
 on:
   pull_request:
     branches: [develop, main]
+  pull_request_target:
+    branches: [develop]
   workflow_dispatch:
 
 concurrency:
