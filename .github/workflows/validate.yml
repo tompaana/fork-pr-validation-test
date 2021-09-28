@@ -1,0 +1,22 @@
+name: Validation
+
+on:
+  pull_request:
+    branches: [develop, main]
+  workflow_dispatch:
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.head_ref }}"
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Lint
+    env:
+      test_secret: ${{ secrets.TEST_SECRET }}
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Test
+      run: |
+        echo Hello there! $test_secret
