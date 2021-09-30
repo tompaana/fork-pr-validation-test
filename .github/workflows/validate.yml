@@ -22,3 +22,6 @@ jobs:
     - name: Test
       run: |
         echo Hello there! $test_secret
+    - name: Tell event name
+      run: |
+        echo ${{ github.event_name }}
