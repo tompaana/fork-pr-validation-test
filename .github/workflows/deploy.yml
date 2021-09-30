@@ -28,4 +28,5 @@ jobs:
     steps:
     - name: Test
       run: |
+        echo ${{ github.event_name }}
         echo Hello there! $test_secret
